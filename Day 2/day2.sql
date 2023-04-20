@@ -63,7 +63,7 @@
 --14)Fetch all details of top 3 highly paid employees who are in department Shipping and IT 
     select * from employee_table e
     join departments d on d.department_id = e.department_id
-    where d.department_name = 'Shipping' or d.department_name= 'IT'
+    where d.department_name in( 'Shipping', 'IT')
     order by salary desc
     limit 3;
 
